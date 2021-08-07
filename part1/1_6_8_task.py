@@ -31,38 +31,29 @@ class ExtendedStack(list):
 
 
 class ExtendedStack(list):
-    list_with_stack_properties = []
-
-    def __init__(self, name):
-        self.list_with_stack_properties = name
 
     def sum(self):
-        if len(self.list_with_stack_properties) > 2:
-            a = self.list_with_stack_properties.pop()
-            b = self.list_with_stack_properties.pop()
-            self.list_with_stack_properties.append(a + b)
+        a = self.pop()
+        b = self.pop()
+        self.append(a + b)
 
     def sub(self):
-        if len(self.list_with_stack_properties) > 2:
-            a = self.list_with_stack_properties.pop()
-            b = self.list_with_stack_properties.pop()
-            self.list_with_stack_properties.append(a - b)
+        a = self.pop()
+        b = self.pop()
+        self.append(a - b)
 
     def mul(self):
-        if len(self.list_with_stack_properties) > 2:
-            a = self.list_with_stack_properties.pop()
-            b = self.list_with_stack_properties.pop()
-            self.list_with_stack_properties.append(a * b)
+        a = self.pop()
+        b = self.pop()
+        self.append(a * b)
 
     def div(self):
-        if len(self.list_with_stack_properties) > 2:
-            a = self.list_with_stack_properties.pop()
-            b = self.list_with_stack_properties.pop()
-            self.list_with_stack_properties.append(a // b)
+        a = self.pop()
+        b = self.pop()
+        self.append(a // b)
 
     def print_stack(self):
-        print(self.list_with_stack_properties)
-
+        print(self)
 
 
 ex_stack = ExtendedStack([1, 2, 3, 4, -3, 3, 5, 10])
